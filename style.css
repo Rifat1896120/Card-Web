@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #ffffff;
+}
+.container {
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ro{
+    display: none;
+}
+.card {
+    margin-top: 10px;
+  
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 500px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 25px 25px 50% 50%;
+  background: #00a8ff;
+  box-shadow: 0 15px 0 rgba(0, 0, 0, 0.356),
+    inset 0 -15px 0 rgba(0, 0, 0, 0.356), 0 40px 0 rgba(175, 175, 175, 0.356), 0 0px 30px rgb(15, 15, 15);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 541px;
+height: 500px;
+top: -148px;
+left: -325px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.205));
+  filter: blur(2px);
+  transform: rotate(-59deg);
+}
+
+.card:nth-child(1) {
+  background: linear-gradient(
+    to bottom,
+    rgb(247, 0, 255),
+    rgba(0, 0, 255, 0.829)
+  );
+}
+.card:nth-child(2) {
+  background: linear-gradient(to bottom, #fa0874, #ffc446);
+}
+.card:nth-child(3) {
+  background: linear-gradient(to bottom, #f7b62c, #07a3f7);
+}
+
+.card .icon {
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.616);
+  margin: auto;
+  position: relative;
+
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.356),
+    inset 0 -10px 0 rgba(0, 0, 0, 0.356), 0 20px 0 rgba(226, 226, 226, 0.651);
+}
+.card .icon::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 0 50% 0 0;
+  box-shadow: 0 -19px 0 rgba(0, 0, 0, 0.616);
+  left: -40px;
+}
+.card .icon::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50% 0 0 0;
+  box-shadow: 0 -19px 0 rgba(0, 0, 0, 0.616);
+  left: 120px;
+}
+.card .icon i {
+  font-size: 67px;
+  color: rgba(255, 255, 255, 0.582);
+  position: relative;
+  top: 22%;
+  left: 22%;
+}
+.contain {
+  position: absolute;
+  top: 40%;
+  left: 14%;
+  max-width: 220px;
+  text-align: center;
+}
+.up{
+animation: up 2s ease-in-out;
+}
+
+@keyframes up {
+    0%{
+        transform: translateY(900px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.down{
+animation: down 2s ease-in-out;
+}
+
+@keyframes down {
+    0%{
+        transform: translateY(-600px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.btn button{
+font-size: 60px;
+display: none;
+background: #142450;
+border: none;
+border-radius: 10px;
+padding: 5px 60px;
+}
